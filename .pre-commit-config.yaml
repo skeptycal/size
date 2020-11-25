@@ -7,7 +7,7 @@
 ###############################################################################
 # Pre-commit Sample yaml template
 # default_language_version:
-# python: python3.7
+# python: python3.9
 default_stages: [commit, push]
 exclude: "^$"
 fail_fast: false
@@ -37,7 +37,7 @@ repos:
           - id: detect-private-key
           - id: double-quote-string-fixer
           - id: end-of-file-fixer
-          #   - id: file-contents-sorter # default alpha (must provide list)
+          #   - id: file-contents-sorter # default alpha sort (must provide list)
           - id: fix-byte-order-marker
           - id: fix-encoding-pragma
           - id: mixed-line-ending
@@ -46,22 +46,22 @@ repos:
           #   - id: sort-simple-yaml
           - id: trailing-whitespace
 
-      # pylint settings ... replace as needed
-    # - repo: git://github.com/pre-commit/mirrors-pylint
-    #   sha: master
-    #   hooks:
-    #       - id: pylint
+    #   pylint settings ... replace as needed
+    - repo: git://github.com/pre-commit/mirrors-pylint
+      sha: master
+      hooks:
+          - id: pylint
 
     # - repo: git://github.com/golangci/golangci-lint
     #   rev: v1.33.0
     #   hooks:
     #       - id: golangci-lint
 
-    # - repo: github.com/pre-commit/mirrors-prettier
-    #   rev: master
-    #   hooks:
-    #       - id: prettier
-    #         files: \.(js|ts|json|html|css)$
+    - repo: github.com/pre-commit/mirrors-prettier
+      rev: master
+      hooks:
+          - id: prettier
+            files: \.(js|ts|json|html|css)$
 
     - repo: git://github.com/dnephin/pre-commit-golang
       rev: master
