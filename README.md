@@ -1,7 +1,8 @@
 # size - memory consumption at runtime
 
-Measure the size of an object in your Go program at runtime based on `binary.Size()` from the Go standard library
-and adapted from [DmitriyVTitov](https://github.com/DmitriyVTitov)'s [size](https://github.com/DmitriyVTitov/size) ([MIT License](LICENSE))
+>Measures the size of an object in your Go program at runtime based on `binary.Size()` from the Go standard library.
+
+Adapted from [DmitriyVTitov](https://github.com/DmitriyVTitov)'s [size](https://github.com/DmitriyVTitov/size) ([MIT License](LICENSE))
 
 Features:
 - supports non-fixed size variables and struct fields: `struct`, `int`, `slice`, `string`, `map`;
@@ -19,7 +20,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/DmitriyVTitov/size"
+	"github.com/skeptycal/size"
 )
 
 func main() {
